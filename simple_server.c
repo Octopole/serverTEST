@@ -40,7 +40,7 @@ int main(){
 	while(1){
 		sin_size = sizeof(struct sockaddr_in);
 		new_sockfd = accept(sockfd, (struct sockaddr *)&client_addr, &sin_size);
-		if(new_sockfd = -1){
+		if(new_sockfd == -1){
 			fatal("accepting connection");
 		}
 		printf("server: got connection from %sport %d\n", inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port));
